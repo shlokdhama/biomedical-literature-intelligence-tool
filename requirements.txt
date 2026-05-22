@@ -1,0 +1,7 @@
+streamlit
+transformers
+torch
+biopython
+requests
+sentencepiece
+lxml
