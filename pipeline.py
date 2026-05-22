@@ -1,22 +1,30 @@
+import streamlit as st
 from transformers import pipeline
 from pubmed_fetch import fetch_abstract_clean
 
-# Load models once at the top, not inside the function.
-bio_ner = pipeline(
-    "ner",
-    model="d4data/biomedical-ner-all",
-    aggregation_strategy="first",
-)
 
-summarizer = pipeline(
-    "summarization",
-    model="sshleifer/distilbart-cnn-12-6",
-)
+@st.cache_resource
+def load_models():
+    bio_ner = pipeline(
+        "ner",
+        model="d4data/biomedical-ner-all",
+        aggregation_strategy="first",
+    )
 
-classifier = pipeline(
-    "zero-shot-classification",
-    model="facebook/bart-large-mnli",
-)
+    summarizer = pipeline(
+        "summarization",
+        model="sshleifer/distilbart-cnn-12-6",
+    )
+
+    classifier = pipeline(
+        "zero-shot-classification",
+        model="facebook/bart-large-mnli",
+    )
+
+    return bio_ner, summarizer, classifier
+
+
+bio_ner, summarizer, classifier = load_models()
 
 DISEASE_LABELS = [
     "mental health and psychiatric disorders",
