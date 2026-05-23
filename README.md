@@ -28,8 +28,6 @@ This project demonstrates how transformer-based NLP models can turn unstructured
 
 ## Screenshots
 
-Add the screenshots to `docs/screenshots/` using the filenames below.
-
 | PubMed ID | Example | Screenshot |
 |---|---|---|
 | `33313405` | Pembrolizumab and metastatic melanoma | `docs/screenshots/pembrolizumab-melanoma.png` |
