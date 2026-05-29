@@ -28,11 +28,24 @@ This project demonstrates how transformer-based NLP models can turn unstructured
 
 ## Screenshots
 
-| PubMed ID | Example | Screenshot |
-|---|---|---|
-| `33313405` | Pembrolizumab and metastatic melanoma | `docs/screenshots/pembrolizumab-melanoma.png` |
-| `33709421` | BCG vaccine and tuberculosis | `docs/screenshots/bcg-tuberculosis.png` |
-| `36449413` | Lecanemab and Alzheimer's disease | `docs/screenshots/lecanemab-alzheimers.png` |
+### PubMed ID: `33313405`
+**Pembrolizumab and metastatic melanoma**
+
+<img src="https://github.com/user-attachments/assets/d3e92a50-ea10-46ad-96d0-82df435ab5ee" width="700">
+
+---
+
+### PubMed ID: `33709421`
+**BCG vaccine and tuberculosis**
+
+<img src="https://github.com/user-attachments/assets/e47a5dff-ed7e-4724-b0e7-86bc490bf095" width="700">
+
+---
+
+### PubMed ID: `36449413`
+**Lecanemab and Alzheimer's disease**
+
+<img src="https://github.com/user-attachments/assets/5a275b10-8d10-43bc-8766-af001f42c83c" width="700">
 
 <!--
 After adding the image files, you can replace the table above with:
@@ -138,12 +151,3 @@ Try these PubMed IDs:
 32445440
 ```
 
-## Deployment Notes
-
-For Streamlit Cloud, deploy with:
-
-- Python version: 3.11 or 3.12
-- Branch: `main`
-- Main file path: `app.py`
-
-If Streamlit Cloud builds the app with Python 3.14, dependency installation or transformer pipeline loading may fail.
